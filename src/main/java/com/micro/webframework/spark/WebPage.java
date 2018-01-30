@@ -15,9 +15,9 @@ import spark.Spark;
 
 public class WebPage {
 	public static void main(String[] args) {
-		Configuration config = new Configuration();
+		final Configuration config = new Configuration();
 		config.setClassForTemplateLoading(AppFreemakerStyle.class, "/");
-		StringWriter strWr = new StringWriter();
+		final StringWriter strWr = new StringWriter();
 		
 		Spark.get("/hello", new Route(){
 

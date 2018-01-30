@@ -12,12 +12,12 @@ import freemarker.template.TemplateException;
 public class AppFreemakerStyle {
 
 	public static void main(String[] args) {
-		Configuration config = new Configuration();
+		final Configuration config = new Configuration();
 		config.setClassForTemplateLoading(AppFreemakerStyle.class, "/");
 		
 		try {
 			Template helloTemp = config.getTemplate("hello.ftl");
-			StringWriter strWr = new StringWriter();
+			final StringWriter strWr = new StringWriter();
 			Map<String,Object> dataMap = new HashMap<String,Object>();
 			dataMap.put("name", "Kingsly starts Freemarker");
 			helloTemp.process(dataMap, strWr);

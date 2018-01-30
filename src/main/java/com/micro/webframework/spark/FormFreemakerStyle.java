@@ -19,9 +19,9 @@ public class FormFreemakerStyle {
 
 
 	public static void main(String[] args) {
-		Configuration config = new Configuration();
+		final Configuration config = new Configuration();
 		config.setClassForTemplateLoading(FormFreemakerStyle.class, "/");
-		StringWriter strWr = new StringWriter();
+		final StringWriter strWr = new StringWriter();
 		Spark.get("/", new Route(){
 
 			public Object handle(Request arg0, Response arg1) throws Exception {
